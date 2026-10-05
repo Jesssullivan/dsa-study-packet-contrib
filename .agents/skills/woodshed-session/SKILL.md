@@ -9,8 +9,9 @@ Use `just capabilities` to discover available activities and workspaces. Ask
 about desired time, study or practice, focus, feedback, and workspace when the
 user has not chosen them. Do not assume the learner knows the available modes.
 Use `just session` for the terminal dialogue, or the current `just session
-start` interface for explicit choices. Run `just session resume` to inspect
-an existing session and `just session finish "one correction"` to close it.
+start` interface for explicit choices. `just session current` reports JSON
+state; `just session resume` continues it, and `just session finish "one correction"`
+closes it.
 A study-to-implementation transition requires the user's explicit readiness;
 use the canonical `--ready` transition rather than revealing answers mid-rep.
 
