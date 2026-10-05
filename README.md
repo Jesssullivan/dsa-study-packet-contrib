@@ -28,4 +28,5 @@ personas, hook guard, generators, and their tests byte-for-byte. Other
 are evidence, not active commands or product authority. Do not restore the
 old generated routing as a second engine. `overlay/vscode-settings.json`
 records former editor preferences for review; it includes a retired disabled
-sandbox preference and must not replace current product settings.
+sandbox preference. Apply any approved provider keys to user or profile editor
+settings outside the tracked product, never to product `.vscode/settings.json`.
