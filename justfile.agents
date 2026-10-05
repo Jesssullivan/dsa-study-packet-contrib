@@ -1,0 +1,11 @@
+set dotenv-load := false
+
+# Optional local generator; restore scripts and provider templates first.
+agents-generate:
+    uv run python scripts/gen_agent_instructions.py
+
+agents-check:
+    uv run python scripts/check_agent_instructions.py
+
+agents-test:
+    uv run pytest tests/test_gen_agent_instructions.py tests/test_hooks_guard.py
