@@ -22,6 +22,13 @@ Provider-specific setup and authentication remain deliberate local choices.
 `just capabilities` lists the actual supported options. Candidate work stays
 private under `.challenges`; the learner owns source and test edits.
 
+`.agents/tools/gh-codespace-file/` preserves optional operator tooling for an
+existing file-only GitHub credential provider. Its pinned public-source
+bootstrap builds a narrow upstream Codespaces SSH/logs/rebuild adapter and runs
+synthetic/race checks. The tool never participates in the practice dispatcher
+and is not needed for public practice. Read its README and qualification before
+an explicitly selected owned-resource action; credentials stay outside git.
+
 `provenance/legacy/` preserves the retired provider templates, generated
 personas, hook guard, generators, and their tests byte-for-byte. Other
 `provenance/` files retain prior maps and validation contracts. These files
