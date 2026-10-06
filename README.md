@@ -9,18 +9,21 @@ the current product through `just capabilities` and routes all activity through
 `just session`. It does not maintain a second catalog or state machine.
 
 After fetching the contribution fork's overlay branch, restore the active
-adapter into a product feature worktree and exclude it locally:
+adapter into a product feature worktree and exclude it locally. Restore only
+the chosen adapter, leaving optional operator tools and provenance separate:
 
 ```bash
 git fetch origin agents-overlay
-git restore --source=origin/agents-overlay --worktree -- AGENTS.md .agents
+git restore --source=origin/agents-overlay --worktree -- AGENTS.md .agents/skills/woodshed-session
 printf 'AGENTS.md\n.agents/\n' >> "$(git rev-parse --git-path info/exclude)"
 ```
 
 Install the skill in the tool you choose, or read its small adapter directly.
 Provider-specific setup and authentication remain deliberate local choices.
-`just capabilities` lists the actual supported options. Candidate work stays
-private under `.challenges`; the learner owns source and test edits.
+`just capabilities` lists material and its supported modes. Workspace, editor,
+and protected-service readiness come from the chosen environment's diagnostics.
+Candidate work stays private under `.challenges`; the learner owns source and
+test edits and supplies the correction used to finish a session.
 
 `.agents/tools/gh-codespace-file/` preserves optional operator tooling for an
 existing file-only GitHub credential provider. Its pinned public-source
